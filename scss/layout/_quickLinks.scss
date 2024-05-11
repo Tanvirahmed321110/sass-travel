@@ -1,0 +1,33 @@
+
+.quick-links{
+    .quick-links-wrapper{
+        .quick-links-area{
+            
+            // items
+            .quick-links-items{
+                @include grid(1,10px);
+                
+                // Responsive
+                @include responsive (tab){
+                    @include grid(2,10px);
+                }
+                @include responsive (laptop){
+                    @include grid(3,15px);
+                }
+                
+                .quick-link-item{
+                    background-color: $off-white;
+                    padding:20px 15px;
+                    border-radius: 5px;
+                    @include flex(space-between,flex-start,10px,column);
+                    
+                    div{
+                        i{
+                            font-size: $sub-title-font;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+
+.card{
+    background-color: $off-white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: 300px;
+    @include flex(flex-end,flex-end,100px,column);
+    transition: .3s ease;
+    
+    
+    // card image
+    .card-image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            transition: .3s ease;
+        }
+    }
+    
+    
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.459);
+        z-index: 1;
+    }
+    
+    .card-body,
+    .card-header{
+        position: absolute;
+        z-index: 5;
+        color: $white-color;
+        width:100%;
+        padding: 20px;
+    }
+    
+    // card-header
+    .card-header{
+        top: 10px;
+        left: 0;
+        @include flex(space-between,center,_,_);
+        
+        .social{
+            @include flex(_,_,10px,_);
+        }
+        .label{
+            background-color: $primary-color;
+            padding: 7px 20px;
+            border-radius: 5px;
+            font: $paragraph-font;
+            border: 1px solid transparent;
+            transition: .3s linear;
+            
+            &:hover{
+                border: 1px solid $off-white;
+            }
+        }
+        a{
+            border: 1px solid transparent;
+            padding: 2px 6px;
+            border-radius: 5px;
+            border: 1px solid $off-white;
+            i{
+                color: $white-color;
+                font-size: $medium-font;
+            }
+            
+        }
+    }
+    
+    // card body
+    .card-body{
+        left: 0;
+        @include flex(_,_,15px,column);
+    }
+    
+    // hover in card 
+    
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+        &::after{
+            background-color: unset;
+        }
+    }
+    
+    @include responsive(laptop){
+        padding: 25px;
+        border-radius: 15px;
+    }
+}

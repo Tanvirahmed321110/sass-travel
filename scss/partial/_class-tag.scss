@@ -1,0 +1,120 @@
+
+// Reset code.
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+
+
+body{
+    font-family: $font_family;
+}
+section{
+    margin: 50px 0 ;
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+a{
+    display: inline-block;
+    color: $primary-color;
+}
+
+i{
+    color: $primary-color;
+}
+
+
+button{
+    outline: none;
+    font-family: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input{
+    padding: 11px 12px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    border: 1px solid $off-white;
+    min-width: 150px;
+    width: 100%;
+    display: block;
+    background-color: $white-color;
+    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    &:hover,
+    &:focus{
+        border: 1px solid $secondary-color;
+    }
+}
+
+p{
+    font-size: $small-font;
+    
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+    margin: 0 auto;
+}
+.w-100{
+    width: 100%;
+}
+.w-50{
+    width: 50%;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+.my-10{
+    margin: 10px 0;
+}
+.mt-10{
+    margin-top: 15px;
+}
+
+.header-font{
+    font-size: $header-font;
+}
+.section-title{
+    font-size: $section-header-font;
+    font-family:sans-serif;
+}
+
+.sub-title{
+    font-size: $medium-font;
+    
+    @include responsive (laptop){
+        font-size:$sub-title-font;
+    }
+}
+
+.header{
+    margin-bottom: 25px;
+}
+
+
+.text-start{
+    text-align: left;
+    display: block;
+}

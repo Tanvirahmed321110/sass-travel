@@ -1,0 +1,22 @@
+.news-letter{
+    .news-letter-area{
+        .header{}
+        .news-letter-input-area{
+            @include flex(flex-start,_,15px,column);
+            
+            // Responsive 
+            @include responsive(tab){
+                @include flex(_,_,25px,_);
+            }
+            
+            .news-letter-input{
+                @include flex(_,_,10px,_);
+                
+            // Responsive 
+            @include responsive(tab){
+                @include flex(_,_,35px,_);
+            }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+
+.btn{
+    display: inline-block;
+    background-color: $primary-color;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color:$white-color;
+    // font-size: $sub-title-font;
+    border: none;
+    transition: .3s ease;
+    outline: none;
+    
+    a{
+        color: $white-color;
+    }
+    
+    &:hover{
+        background-color: $secondary-color;
+    }
+}

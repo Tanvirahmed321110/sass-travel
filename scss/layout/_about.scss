@@ -1,0 +1,88 @@
+
+.about{
+    .about-area{
+        // header 
+        .header {}
+        // about-body
+        .about-body{
+            
+            // responsive
+            @include responsive(laptop){
+                @include flex(flex-start,stret,50px,_);
+            }
+            // user-card
+            .user-card{
+                background-color: $off-white;
+                padding: 25px;
+                border-radius: 10px;
+                @include flex(center,center,2px,column);
+                img{
+                    width: 90px;
+                    height:90px;
+                    border-radius: 50%;
+                    object-position: top;
+                    margin: 0 auto;
+                }
+                // user card body
+                .user-card-body{
+                    @include flex(flex-start,_,1px,column);
+                    
+                    // social
+                    .social{
+                        @include flex(center,center,15px,_);
+                        margin-top: 5px;
+                        a{
+                            i{
+                                font-size: $medium-font
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // instragram
+            .instragram{
+                .instragram-images{
+                    @include grid (2,2px);
+                    
+                    // responsive
+                    @include responsive(tab){
+                        img{
+                            max-width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .trusted{
+        padding: 50px 0;
+        @include flex(center,center,25px,column);
+        
+        // responsive
+        @include responsive(laptop) {
+            @include flex(space-between,center,_,row);
+            
+            .img{
+                order: 1;
+            }
+            .content{
+                order: 2;
+            }
+        }
+        
+        .img{
+            width: 100%;
+            order: 2;
+            img{border-radius: 10px;}
+        }
+        .content{
+            width: 100%;
+            order: 1;
+            
+            .section-title{
+                font-size: $section-header-font - 8px;
+            }
+        }
+    }
+}
