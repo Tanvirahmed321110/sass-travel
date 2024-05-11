@@ -1,5 +1,15 @@
 
 header{
+    &.active{
+        position: fixed;
+        box-shadow: 0 10px 15px wheat;
+        background-color: rgb(255, 255, 255);
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 6;
+    }
+    
     .header-area{
         @include flex (space-between,center,_,_);
         padding: 10px 0;
@@ -138,7 +148,5 @@ header{
             }
             
         }
-    }
-    
-    
+    }    
 }

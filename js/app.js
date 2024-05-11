@@ -29,3 +29,16 @@ searchCloseBtn.addEventListener('click',function(){
     searchFrield.classList.remove('active');
     searchFrield.classList.add('deactive')
 })
+
+
+// sticky header
+const scrollAmount = 200;
+window.addEventListener('scroll',function(){
+    let scrolled = this.window.scrollY;
+    if(scrollAmount<=scrolled){
+        header.classList.add('active')
+    }
+    else{
+        header.classList.remove('active')
+    }
+})
